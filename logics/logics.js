@@ -5,7 +5,6 @@ const status_code_game = {
 	indexOfCorrectAnswer: 0,
 	generateQuestion: function () {
 		const randomNum = Math.round(Math.random() * 70);
-		console.log("random: ", randomNum);
 		const question = `What does the HTTP Status Code ${codes_definitions.codes[randomNum]} mean?`;
 		this.correctAnswer = codes_definitions.definitions[randomNum];
 		this.indexOfCorrectAnswer = randomNum;
