@@ -13,10 +13,9 @@ header h1 {
 }
 section.status_codegame_wrapper {
 	width: 70vw;
-	margin-left: 15vw;
+	margin: 2vw 12vw;
 	background: rgba(134, 128, 219, 0.719);
-	padding: 9px 15px;
-	height: 100vh;
+	padding: 9px 15px 35px 15px;
 }
 section.game_score {
 	text-align: center;
@@ -79,4 +78,20 @@ div#game_answers div {
 	cursor: pointer;
 	padding: 5px 2px;
 	border-radius: 5px;
+}
+footer {
+	background: #456;
+	padding: 25px 0;
+	text-align: center;
+	margin-top: 18vw;
+}
+
+@media only screen and (max-width: 570px) {
+	section.status_codegame_wrapper {
+		width: 80vw;
+		margin: 2vw 7vw;
+		background: rgba(134, 128, 219, 0.719);
+		padding: 9px 15px 35px 15px;
+		border: 1px red solid;
+	}
 }
