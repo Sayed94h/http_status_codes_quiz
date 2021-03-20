@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: rgb(15, 12, 59);
+	color: white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header h1 {
+	text-align: center;
+	text-shadow: 3px 3px blue;
+	word-spacing: 5px;
+	letter-spacing: 2px;
+}
+section.status_codegame_wrapper {
+	width: 70vw;
+	margin-left: 15vw;
+	background: rgba(134, 128, 219, 0.719);
+	padding: 9px 15px;
+	height: 100vh;
+}
+section.game_score {
+	text-align: center;
+	border-bottom: 2px white solid;
+	width: 100%;
+	font-weight: bold;
+	font-size: 19px;
+	text-shadow: 3px 3px rgba(8, 8, 133, 0.63);
+	margin-bottom: 9px;
+	padding-bottom: 15px;
+}
+div#game_score {
+	margin-top: 9px;
+}
+section.status_codegame_container,
+section.game_itself {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+div#game_nextQuestion,
+div#game_start {
+	cursor: pointer;
+	background: gray;
+	border: 1px black solid;
+	border-radius: 9px;
+	width: 250px;
+	text-align: center;
+	padding: 7px 4px;
+	font-size: 22px;
+	margin-top: 9px;
+}
+section.game_nextQuestion {
+	margin-top: 9px;
+}
+div#game_nextQuestion {
+	display: none;
+}
+section.game_questions {
+	display: none;
+	text-align: center;
+	background-color: aliceblue;
+	color: black;
+	padding: 11px 7px;
+	border-radius: 9px;
+	margin: 9px 0;
+}
+div#game_question {
+	border-bottom: 2px dotted blue;
+	padding-bottom: 5px;
+}
+div#game_answers {
+	margin: 12px 0;
+}
+div#game_answers div {
+	margin-bottom: 5px;
+	background-color: rgba(128, 128, 128, 0.226);
+	border: gray 1px solid;
+	cursor: pointer;
+	padding: 5px 2px;
+	border-radius: 5px;
+}
