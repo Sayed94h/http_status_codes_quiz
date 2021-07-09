@@ -59,16 +59,16 @@ searchInput.onkeyup = function() {
             if (!onlyChar.includes("x")) {
                 const toNum = Number(onlyChar)
                 result = status_code_game.searchStatusCode(toNum)
-                if (result === "undefined") {
-                    searchResult.innerText = "Sorry, could not find explanation for the status/response code " + onlyChar
+                if (result === "undefined" || result === undefined) {
+                    searchResult.innerText = "could not find result for the response code " + onlyChar
                     return
                 }
                 searchResult.innerText = result
 
             } else {
                 result = status_code_game.searchStatusCode(onlyChar)
-                if (result === "undefined") {
-                    searchResult.innerText = "Sorry, could not find explanation for the status/response code " + onlyChar
+                if (result === "undefined" || result === undefined) {
+                    searchResult.innerText = "could not find result for the response code " + onlyChar
                     return
                 }
                 searchResult.innerText = result
