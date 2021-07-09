@@ -5,25 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Language" content="English">
+    <meta name="Author" content="Sayed Khalil Kazimi">
+    <meta name="Keywords" content="http status code, http response code, http, https, HTML, CSS, JavaScript, 
+    web development, quiz, HTML Quiz app, javascript quiz app, Training, Learning, Programming, Examples, Code Game, Tutorials,
+    Teaching, Lessons, Learn Coding, Learn HTTP Response Codes, Learn HTTP status codes">
+    <meta name="Description" content="A Quiz app that lets you practice http status codes or http response codes. http status code, http response code, http, https, HTML, CSS, JavaScript, 
+    web development, quiz, HTML Quiz app, javascript quiz app, Training, Learning, Programming, Examples, Code Game, Tutorials,
+    Teaching, Lessons, Learn Coding, Learn HTTP Response Codes, Learn HTTP status codes">
     <link rel="apple-touch-icon" sizes="180x180" href="./view/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="48x48" href="./favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./view/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./view/images/favicon-16x16.png">
     <link rel="manifest" href="./view/images/site.webmanifest">
     <link rel="stylesheet" href="./view/style.css">
-    <title>Http Status codes</title>
+    <title>Http Status codes | https response codes</title>
 </head>
 
 <body>
     <section class="status_codegame_wrapper">
         <header>
             <h1>HTTP Status Codes Quiz <br> HTTP Response Codes Quiz</h1>
-            <p>Learn and memorize HTTP status codes or HTTP response codes by playing this small quiz game. Play as much
-                as
-                you can. Read the question and guess the correct answer. If you answer correctly you get score. If your
-                answer is not correct, no problem. You will see the correct answer(the correct answer has green
-                background).</p>
+            <p>Learn and memorize HTTP status codes or HTTP response codes by playing this small quiz game. Play as much as you can. Read the question and guess the correct answer. If you answer correctly you get score. If your answer is not correct, no
+                problem. You will see the correct answer(the correct answer has green background).
+            </p>
         </header>
+        <section class="search_status_code">
+            <div class="div_label">
+                <label for="search_status_code">Search Status Code</label>
+            </div>
+            <input type="text" id="search_status_code" placeholder=" example: 404 ">
+            <div class="result">Code Definition: <span id="search_result"></span></div>
+        </section>
+        <hr>
         <section class="status_codegame_container">
             <section class="game_score">
                 <div>SCORE</div>
@@ -45,7 +59,7 @@
     </section>
     <footer>
         <div>
-            &copy; Created By Sayed Kazimi | 2021
+            &copy; Created By <a href="https://www.linkedin.com/in/sayed-kazimi-0507/" target="_blank" title="LinkedIn Profile">Sayed Khalil Kazimi</a> | 2021 - <span id="current_year"></span>
         </div>
     </footer>
     <script src="./index.js" type="module"></script>
