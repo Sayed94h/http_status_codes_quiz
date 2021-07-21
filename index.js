@@ -49,31 +49,34 @@ game_answers.onclick = function(event) {
 // search status code
 const searchInput = document.getElementById("search_status_code");
 const searchResult = document.getElementById("search_result");
+const searchBtn = document.querySelector(".searchBtn")
 
-searchInput.onkeyup = function() {
-        const userInput = searchInput.value
-        const onlyChar = userInput.replaceAll(/\s/g, '')
-        let result = ""
-        if (onlyChar.length > 2) {
-            if (!onlyChar.includes("x")) {
-                const toNum = Number(onlyChar)
-                result = status_code_game.searchStatusCode(toNum)
-                if (result === "undefined" || result === undefined) {
-                    searchResult.innerText = "could not find result for the response code " + onlyChar
-                    return
-                }
-                searchResult.innerText = result
-
-            } else {
-                result = status_code_game.searchStatusCode(onlyChar)
-                if (result === "undefined" || result === undefined) {
-                    searchResult.innerText = "could not find result for the response code " + onlyChar
-                    return
-                }
-                searchResult.innerText = result
+function FindAnswer() {
+    const userInput = searchInput.value
+    const onlyChar = userInput.replaceAll(/\s/g, '')
+    let result = ""
+    if (onlyChar.length > 2) {
+        if (!onlyChar.includes("x")) {
+            const toNum = Number(onlyChar)
+            result = status_code_game.searchStatusCode(toNum)
+            if (result === "undefined" || result === undefined) {
+                searchResult.innerText = "could not find result for the response code " + onlyChar
+                return
             }
+            searchResult.innerText = result
+
+        } else {
+            result = status_code_game.searchStatusCode(onlyChar)
+            if (result === "undefined" || result === undefined) {
+                searchResult.innerText = "could not find result for the response code " + onlyChar
+                return
+            }
+            searchResult.innerText = result
         }
     }
+}
+searchBtn.onclick = FindAnswer
+searchInput.onkeyup = FindAnswer
     // set the current year in the footer
 
 function cY() {

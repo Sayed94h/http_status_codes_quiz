@@ -33,9 +33,16 @@ section.search_status_code div.result span {
     font-weight: normal;
 }
 
-section.search_status_code input {
-    width: 100%;
+section.search_status_code input.searchBox {
+    width: 65%;
     height: 30px;
+    border-radius: 9px;
+    outline: #0af;
+}
+
+section.search_status_code input.searchBtn {
+    width: 25%;
+    height: 35px;
     border-radius: 9px;
     outline: #0af;
 }
