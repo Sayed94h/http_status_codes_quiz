@@ -76,8 +76,8 @@ function FindAnswer() {
     }
 }
 searchBtn.onclick = FindAnswer
-searchInput.onkeyup = FindAnswer
-    // set the current year in the footer
+
+// set the current year in the footer
 
 function cY() {
     const cDate = new Date()
