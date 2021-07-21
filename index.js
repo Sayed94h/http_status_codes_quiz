@@ -51,7 +51,7 @@ const searchInput = document.getElementById("search_status_code");
 const searchResult = document.getElementById("search_result");
 const searchBtn = document.querySelector(".searchBtn")
 
-function FindAnswer() {
+searchBtn.onclick = function() {
     const userInput = searchInput.value
     const onlyChar = userInput.replaceAll(/\s/g, '')
     let result = ""
@@ -75,7 +75,6 @@ function FindAnswer() {
         }
     }
 }
-searchBtn.onclick = FindAnswer
 
 // set the current year in the footer
 

@@ -40,7 +40,7 @@ section.search_status_code input.searchBox {
     outline: #0af;
 }
 
-section.search_status_code input.searchBtn {
+section.search_status_code button.searchBtn {
     width: 25%;
     height: 35px;
     border-radius: 9px;
@@ -138,6 +138,21 @@ footer {
     padding: 25px 0;
     text-align: center;
     margin-top: 18vw;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+div.social_media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 15px;
 }
 
 @media only screen and (max-width: 570px) {
