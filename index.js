@@ -51,7 +51,6 @@ const searchInput = document.getElementById("search_status_code");
 const searchResult = document.getElementById("search_result");
 
 searchInput.onkeyup = function() {
-        debugger
         const userInput = searchInput.value
         const onlyChar = userInput.replaceAll(/\s/g, '')
         let result = ""
