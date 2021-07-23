@@ -49,9 +49,9 @@ game_answers.onclick = function(event) {
 // search status code
 const searchInput = document.getElementById("search_status_code");
 const searchResult = document.getElementById("search_result");
-const searchBtn = document.querySelector(".searchBtn")
+// const searchBtn = document.querySelector(".searchBtn")
 
-searchBtn.onclick = function() {
+function searchFeature() {
     const userInput = searchInput.value
     const onlyChar = userInput.replaceAll(/\s/g, '')
     let result = ""
@@ -73,8 +73,12 @@ searchBtn.onclick = function() {
             }
             searchResult.innerText = result
         }
+    } else {
+        searchResult.innerText = ""
     }
 }
+// searchBtn.onclick = searchFeature
+searchInput.onkeyup = searchFeature
 
 // set the current year in the footer
 
