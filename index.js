@@ -79,13 +79,13 @@ function searchFeature(e) {
 }
 // searchBtn.onclick = searchFeature
 // searchInput.onkeyup = searchFeature
-searchInput.addEventListener("change", (e) => {
-    searchFeature(e)
-})
-searchInput.addEventListener("keyup", (e) => {
-        searchFeature(e)
-    })
-    // searchInput.addEventListener("input", searchFeature)
+// searchInput.addEventListener("change", (e) => {
+//     searchFeature(e)
+// })
+// searchInput.addEventListener("keyup", (e) => {
+//     searchFeature(e)
+// })
+searchInput.addEventListener("input", searchFeature)
     // searchInput.onchange = searchFeature
 
 // set the current year in the footer
