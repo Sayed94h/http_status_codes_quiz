@@ -51,24 +51,24 @@ const searchInput = document.getElementById("search_status_code");
 const searchResult = document.getElementById("search_result");
 // const searchBtn = document.querySelector(".searchBtn")
 
-function searchFeature(e) {
+function findHttpResCode(e) {
     const userInput = e.target.value
     const onlyChar = userInput.replaceAll(/\s/g, '')
     let result = ""
-    if (userInput.length > 2 && userInput.length < 4) {
-        if (!userInput.includes("x")) {
-            const toNum = Number(userInput)
+    if (onlyChar.length > 2 && onlyChar.length < 4) {
+        if (!onlyChar.includes("x")) {
+            const toNum = Number(onlyChar)
             result = status_code_game.searchStatusCode(toNum)
             if (result === "undefined" || result === undefined) {
-                searchResult.innerText = "could not find result for the response code " + userInput
+                searchResult.innerText = "could not find result for the response code " + onlyChar
                 return
             }
             searchResult.innerText = result
 
         } else {
-            result = status_code_game.searchStatusCode(userInput)
+            result = status_code_game.searchStatusCode(onlyChar)
             if (result === "undefined" || result === undefined) {
-                searchResult.innerText = "could not find result for the response code " + userInput
+                searchResult.innerText = "could not find result for the response code " + onlyChar
                 return
             }
             searchResult.innerText = result
@@ -77,16 +77,16 @@ function searchFeature(e) {
         searchResult.innerText = " "
     }
 }
-// searchBtn.onclick = searchFeature
-// searchInput.onkeyup = searchFeature
+// searchBtn.onclick = findHttpResCode
+// searchInput.onkeyup = findHttpResCode
 // searchInput.addEventListener("change", (e) => {
-//     searchFeature(e)
+//     findHttpResCode(e)
 // })
 // searchInput.addEventListener("keyup", (e) => {
-//     searchFeature(e)
+//     findHttpResCode(e)
 // })
-searchInput.addEventListener("input", searchFeature)
-    // searchInput.onchange = searchFeature
+searchInput.addEventListener("input", findHttpResCode)
+    // searchInput.onchange = findHttpResCode
 
 // set the current year in the footer
 
