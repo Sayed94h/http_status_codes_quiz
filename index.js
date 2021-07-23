@@ -51,8 +51,8 @@ const searchInput = document.getElementById("search_status_code");
 const searchResult = document.getElementById("search_result");
 // const searchBtn = document.querySelector(".searchBtn")
 
-function searchFeature() {
-    const userInput = searchInput.value
+function searchFeature(e) {
+    const userInput = e.target.value
     const onlyChar = userInput.replaceAll(/\s/g, '')
     let result = ""
     if (userInput.length > 2 && userInput.length < 4) {
@@ -79,8 +79,12 @@ function searchFeature() {
 }
 // searchBtn.onclick = searchFeature
 // searchInput.onkeyup = searchFeature
-searchInput.addEventListener("change", searchFeature)
-searchInput.addEventListener("keyup", searchFeature)
+searchInput.addEventListener("change", (e) => {
+    searchFeature(e)
+})
+searchInput.addEventListener("keyup", (e) => {
+        searchFeature(e)
+    })
     // searchInput.addEventListener("input", searchFeature)
     // searchInput.onchange = searchFeature
 
