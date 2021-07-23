@@ -55,7 +55,7 @@ function searchFeature() {
     const userInput = searchInput.value
     const onlyChar = userInput.replaceAll(/\s/g, '')
     let result = ""
-    if (onlyChar.length > 2) {
+    if (onlyChar.length > 2 && onlyChar.length < 4) {
         if (!onlyChar.includes("x")) {
             const toNum = Number(onlyChar)
             result = status_code_game.searchStatusCode(toNum)
@@ -74,11 +74,14 @@ function searchFeature() {
             searchResult.innerText = result
         }
     } else {
-        searchResult.innerText = ""
+        searchResult.innerText = " "
     }
 }
 // searchBtn.onclick = searchFeature
-searchInput.onkeyup = searchFeature
+// searchInput.onkeyup = searchFeature
+searchInput.addEventListener("change", searchFeature)
+searchInput.addEventListener("keyup", searchFeature)
+    // searchInput.onchange = searchFeature
 
 // set the current year in the footer
 

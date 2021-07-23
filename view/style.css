@@ -159,7 +159,7 @@ div.social_media {
 @media only screen and (max-width: 570px) {
     section.status_codegame_wrapper {
         width: 80vw;
-        margin: 2vw 6vw;
+        margin: 2vw 5.7vw;
         background: rgba(134, 128, 219, 0.719);
         padding: 9px 15px 35px 15px;
         border: 1px red solid;
