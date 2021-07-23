@@ -55,20 +55,20 @@ function searchFeature() {
     const userInput = searchInput.value
     const onlyChar = userInput.replaceAll(/\s/g, '')
     let result = ""
-    if (onlyChar.length > 2 && onlyChar.length < 4) {
-        if (!onlyChar.includes("x")) {
-            const toNum = Number(onlyChar)
+    if (userInput.length > 2 && userInput.length < 4) {
+        if (!userInput.includes("x")) {
+            const toNum = Number(userInput)
             result = status_code_game.searchStatusCode(toNum)
             if (result === "undefined" || result === undefined) {
-                searchResult.innerText = "could not find result for the response code " + onlyChar
+                searchResult.innerText = "could not find result for the response code " + userInput
                 return
             }
             searchResult.innerText = result
 
         } else {
-            result = status_code_game.searchStatusCode(onlyChar)
+            result = status_code_game.searchStatusCode(userInput)
             if (result === "undefined" || result === undefined) {
-                searchResult.innerText = "could not find result for the response code " + onlyChar
+                searchResult.innerText = "could not find result for the response code " + userInput
                 return
             }
             searchResult.innerText = result
@@ -81,6 +81,7 @@ function searchFeature() {
 // searchInput.onkeyup = searchFeature
 searchInput.addEventListener("change", searchFeature)
 searchInput.addEventListener("keyup", searchFeature)
+    // searchInput.addEventListener("input", searchFeature)
     // searchInput.onchange = searchFeature
 
 // set the current year in the footer
